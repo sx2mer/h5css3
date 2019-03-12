@@ -1,0 +1,221 @@
+/* 公用样式 */
+.enter { 
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: fixed;
+    right: 30px;
+    top: 30px;
+    z-index: 1001;
+}
+.more {
+    position: fixed;
+    right: 60px;
+    bottom: 80px;
+    z-index: 1001;
+    animation: updown_more 600ms linear 100ms infinite alternate;
+}
+.items_wrapper {
+    width: 900px;
+    height: 600px;
+    background: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 50%;
+    margin-left: -450px;
+    bottom: 0;
+}
+
+/* 定义第一屏 */
+.bg01 {
+    background: url(../images/01-bg.png) no-repeat center bottom;
+}
+.bg01 .goods {
+    position: absolute;
+    text-align: center;
+    bottom: 90px;
+}
+.bg01 .sofa {
+    position: absolute;
+    bottom: 290px;
+    left: 220px;
+    animation: updown_sofa 1100ms linear infinite alternate;
+}
+.bg01 .flybanner {
+    position: absolute;
+    top: 20px;
+    right: -50px;
+    animation: updown_flybanner 800ms linear infinite alternate;
+}
+
+/* 定义动画 布局用定位 动画用位移*/
+@keyframes updown_flybanner{
+    from {
+        transform: translateY(-20px);
+    }
+    to {
+        transform: translateY(20px);
+    }
+}
+@keyframes updown_more{
+    from {
+        transform: translateY(-15px);
+    }
+    to {
+        transform: translateY(15px);
+    }
+}
+@keyframes updown_sofa{
+    from {
+        transform: translateY(-10px);
+    }
+    to {
+        transform: translateY(10px);
+    }
+}
+
+/* 第二屏开始 */
+.bg02 {
+    background: url(../images/02-bg.png) no-repeat center bottom;
+}
+.goods_list {
+    position: absolute;
+    bottom: 210px;
+    left: 50%;
+    margin-left: -220px;
+    transform-origin: right bottom;
+    transform: scale(0);
+}
+.bg02 .sofa {
+    transform: scale(0.5);
+    position: absolute;
+    top: 132px;
+    left: 292px;
+    opacity: 0;
+    z-index: 1001;
+}
+.input {
+    /* transform: scale(0.7); */
+    position: absolute;
+    top: 121px;
+    right:171px;
+    /* transform: translate(-175px,130px); 中心点位置*/
+    /* 最右边位置transform: translate(2000px,130px);  */
+    transform-origin: right top;
+    opacity: 0;
+}
+.keyWord {
+    position: absolute;
+    bottom: 12px;
+    right: 70px;
+    opacity: 0;
+}
+.bg02.now .input {
+    animation: input02 3s linear forwards;
+}
+.bg02.now .input .keyWord {
+    opacity: 1;
+    transition: all 1s linear 1s;
+}
+.bg02.now .goods_list {
+    transform: none;
+    transition: all 1s linear 2s;
+}
+.text {
+    text-align: center;
+}
+.text .text01 {
+    
+}
+.text .text02 {
+    position: absolute;
+    opacity: 0;
+}
+
+/* 第二屏动画 */
+.bg02.now .text .text01 {
+    position: absolute;
+    opacity: 0;    
+}
+.bg02.now .text .text02 {
+    position: static;
+    opacity: 1;
+    transition: opacity 1s;
+}
+@keyframes input02 {
+    0% {
+        transform: translate(2000px,130px);
+        opacity: 1;
+    }
+    33% {
+        transform: translate(-175px,130px); 
+    }
+    66% {
+        transform: translate(-175px,130px); 
+    }
+    100% {
+        transform: scale(0.7);
+        opacity: 1;
+    }
+}
+/* 第二屏过度到第三屏动画 */
+.bg02.leaved .sofa{
+    animation: sofa02 700ms linear;
+}
+@keyframes sofa02{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 1;
+        transform: translate(-75px,1000px);
+    }
+}
+
+/* 第三屏 */
+.bg03{
+    background: url(../images/03-bg.png) no-repeat center bottom;
+}
+.bg03 .sofa{
+    position: absolute;
+    left: 212px;
+    top: 180px;
+    display: none;
+}
+
+.bg03 .change{
+    position: absolute;
+    bottom: 170px;
+    right: 115px;
+}
+.bg03 .change img:last-child{
+    position: absolute;
+    opacity: 0;
+}
+.bg03 .cart{
+    position: absolute;
+    bottom: 100px;
+    right: 192px;
+}
+.bg03 .cart img:last-child{
+    position: absolute;
+    opacity: 0;
+}
+.bg03.now .change img:first-child{
+    display: none;
+}
+.bg03.now .change img:last-child{
+    position: static;
+    opacity: 1;
+    transition: all 700ms linear;
+}
+.bg03.now .cart img:first-child{
+    display: none;
+}
+.bg03.now .cart img:last-child{
+    position: static;
+    opacity: 1;
+    transition: all 700ms linear;
+}
+.bg03.now .sofa{
+    display: block;
+}
