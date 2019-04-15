@@ -123,9 +123,9 @@
 .text {
     text-align: center;
 }
-.text .text01 {
+/* .text .text01 {
     
-}
+} */
 .text .text02 {
     position: absolute;
     opacity: 0;
@@ -218,4 +218,108 @@
 }
 .bg03.now .sofa{
     display: block;
+    position: relative;
+    z-index: 1001;
+}
+.bg03.leaved .sofa{
+    animation: sofaDrop04 700ms linear;
+}
+@keyframes sofaDrop04{
+    from{
+    }
+    to{
+
+        transform: translate(110px,1150px) rotate(45deg);
+    }
+}
+
+/* 第四屏 */
+.bg04{
+    background: url(../images/04-bg.png) no-repeat center bottom;
+}
+.bg04 .clouds{
+    position: absolute;
+    left: 0;
+    top: 200px;
+    animation: cloudsF 18s linear infinite alternate;
+}
+.bg04 .text04{
+    text-align: center;
+}
+.bg04 .text04 .text01{
+
+}
+.bg04 .text04 .text02{
+    position: absolute;
+    opacity: 0;
+}
+.bg04 .cart{
+    position: relative;
+    margin-top: 170px;
+    text-align: center;
+}
+.bg04.now .cart img:last-child{
+    transform: translateX(1500px); 
+    transition: transform 3.5s linear;
+}
+.bg04 .cart img:first-child{
+    position: absolute;
+    left: 425px;
+    top: -24px;
+    transform: rotate(45deg);
+    opacity: 0;
+    z-index: 1001;
+}
+.bg04.now .cart img:first-child{
+    opacity: 1;
+    transform: rotate(45deg);
+    transform: translateX(1500px); 
+    transition: transform 3.5s linear;
+    /* transition: opacity 700ms linear; */
+}
+.bg04 .cart img:last-child{
+    position: relative;
+    z-index: 1002;
+}
+@keyframes cloudsF{
+    from{
+    }
+    to{
+        transform: translateX(1000px);
+    }
+}
+/* @keyframes cartMove{
+    from{
+
+    }
+    to{
+        transform: translateX(1500px);
+    }
+} */
+.bg04 .address {
+    position: absolute;
+    width: 283px;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: 0;
+}
+.bg04 .address img:last-child{
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.bg04.show .address{
+    opacity: 1;
+    transition: all 800ms linear;
+}
+.bg04.show .text04 .text01{
+    position: absolute;
+    opacity: 0;
+}
+.bg04.show .text04 .text02{
+    position: static;
+    opacity: 1;
+    transition: all 800ms linear;
 }

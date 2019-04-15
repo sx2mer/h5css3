@@ -8,16 +8,49 @@ $(function () {
         sectionsColor: ["#fadd67", "#84a2d4", "#ef674d", "#ffeedd", "#d04759", "#84d9ed", "#8ac060"],
         verticalCentered: false,
         navigation: true,
-        afterLoad:function (link,index) {
+        afterLoad: function (link, index) {
             /*index 序号 1开始  当前屏的序号*/
             console.log(index);
-            $('.section').eq(index-1).addClass('now');
+            $('.section').eq(index - 1).addClass('now');
         },
-        onLeave:function(index,nextIndex,direction){
-            if(index == 2 && nextIndex== 3){
+        afterRender: function () {
+            $('.more').click(function () {
+                $.fn.fullpage.moveSectionDown();
+            });
+        },
+        onLeave: function (index, nextIndex, direction) {
+            if (index == 2 && nextIndex == 3) {
                 $('.bg02').addClass('leaved');
+            } else if (index == 3 && nextIndex == 4) {
+                $('.bg03').addClass('leaved');
             }
-        }
+        },
     });
+    $('.bg04 .cart').on('transitionend',function(){
+        // console.log("动画结束");
+        $('.bg04').addClass('show');
+    });
+
+    /**
+     * 判断各浏览器transitionend事件名称
+    */
+    /* From Modernizr */
+    // function whichTransitionEvent() {
+    //     var t;
+    //     var el = document.createElement('fakeelement');
+    //     var transitions = {
+    //         'transition': 'transitionend',
+    //         'OTransition': 'oTransitionEnd',
+    //         'MozTransition': 'transitionend',
+    //         'WebkitTransition': 'webkitTransitionEnd'
+    //     }
+    //     for (t in transitions) {
+    //         if (el.style[t] !== undefined) {
+    //             return transitions[t];
+    //         }
+    //     }
+    // }
+    // console.log('####'+whichTransitionEvent());        // returns "webkitTransitionEvent" in Chrome
+    // console.log('@@@@' + typeof whichTransitionEvent); // returns "string"
 });
 
