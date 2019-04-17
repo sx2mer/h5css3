@@ -123,9 +123,9 @@
 .text {
     text-align: center;
 }
-.text .text01 {
+/* .text .text01 {
     
-}
+} */
 .text .text02 {
     position: absolute;
     opacity: 0;
@@ -296,3 +296,30 @@
         transform: translateX(1500px);
     }
 } */
+.bg04 .address {
+    position: absolute;
+    width: 283px;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: 0;
+}
+.bg04 .address img:last-child{
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.bg04.show .address{
+    opacity: 1;
+    transition: all 800ms linear;
+}
+.bg04.show .text04 .text01{
+    position: absolute;
+    opacity: 0;
+}
+.bg04.show .text04 .text02{
+    position: static;
+    opacity: 1;
+    transition: all 800ms linear;
+}

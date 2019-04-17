@@ -27,7 +27,8 @@ $(function () {
         },
     });
     $('.bg04 .cart').on('transitionend',function(){
-        console.log("动画结束");
+        // console.log("动画结束");
+        $('.bg04').addClass('show');
     });
 
     /**
