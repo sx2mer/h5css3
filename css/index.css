@@ -327,9 +327,11 @@
 /**第五屏*/
 .bg05{
     background: url(../images/05-bg.png) no-repeat center bottom;
+    overflow: hidden;
 }
-.items_wrapper{
-    position: relative;
+.bg05 .items_wrapper{
+    /* height: 100%; */
+    /* position: relative; */
 
 }
 .bg05 .creditCard{
@@ -349,7 +351,7 @@
 }
 .bg05 .mouse{
     position: absolute;
-    overflow: hidden;
+    /* overflow: hidden; */
     right: 0;
     top: 0;
     height: 100%;
@@ -368,4 +370,32 @@
     position: absolute;
     right: 43px;
     bottom: -500px;         /*变化后为-28px*/
+}
+.bg05 .sofa{
+    position: absolute;
+    transform: rotate(30deg);
+    left: 105px;
+    top: -800px;           /*变化后为365px*/
+}
+/* 第五屏动画 */
+.bg05.now .hand{
+    /* transform: translateY(-470px); */
+    bottom: -28px;
+    transition: bottom 1s linear;
+}
+.bg05.now .mouse img:last-child{
+    opacity: 1;
+    transition: opacity 0.5s 1s linear;
+}
+.bg05.sofaReady .sofa {
+    transform: translateY(1000px) rotate(30deg);
+    transition: transform 1.5s linear;
+}
+.bg05.orderReady .creditCard img:last-child{
+    bottom:180px;
+    transition: bottom 1s linear;
+}
+.bg05.orderReady .sofa {
+    transform: translateY(165px) rotate(30deg);
+    transition: transform 1.5s linear;
 }

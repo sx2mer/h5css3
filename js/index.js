@@ -30,7 +30,14 @@ $(function () {
         // console.log("动画结束");
         $('.bg04').addClass('show');
     });
-
+    $('.bg05 .mouse').on('transitionend',function(){
+        // console.log("动画结束");
+        $('.bg05').addClass('sofaReady');
+    });
+    $('.bg05 .sofa').on('transitionend',function(){
+        // console.log("动画结束");
+        $('.bg05').addClass('orderReady');
+    });
     /**
      * 判断各浏览器transitionend事件名称
     */
