@@ -323,3 +323,35 @@
     opacity: 1;
     transition: all 800ms linear;
 }
+
+/**第五屏*/
+.bg05{
+    background: url(../images/05-bg.png) no-repeat center bottom;
+}
+.items_wrapper{
+    position: relative;
+
+}
+.bg05 .creditCard{
+    position: absolute;
+    top: 200px;
+    left: 0;
+}
+
+.bg05 .mouse{
+    position: absolute;
+    overflow: hidden;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 400px;;
+}
+.bg05 .mouse img{
+    position: absolute;
+    right: 0;
+    bottom: 200px;
+}
+
+.bg05 .mouse img:last-child{
+    opacity: 0;
+}
