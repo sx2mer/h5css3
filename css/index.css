@@ -374,7 +374,7 @@
 .bg05 .sofa{
     position: absolute;
     transform: rotate(30deg);
-    left: 105px;
+    left: 75px;
     top: -800px;           /*变化后为365px*/
 }
 /* 第五屏动画 */
@@ -396,6 +396,11 @@
     transition: bottom 1s linear;
 }
 .bg05.orderReady .sofa {
-    transform: translateY(165px) rotate(30deg);
-    transition: transform 1.5s linear;
+    transform: translateY(1165px) rotate(30deg);
+    transition: transform 1s linear;
+}
+
+/*第六屏布局*/
+.bg06{
+    background: url(../images/06-bg.png) no-repeat left bottom
 }
