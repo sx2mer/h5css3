@@ -404,3 +404,9 @@
 .bg06{
     background: url(../images/06-bg.png) no-repeat left bottom
 }
+.bg06 .text06-01{
+    position: absolute;
+}
+.bg06 .text06-02{
+    opacity: 0;
+}
