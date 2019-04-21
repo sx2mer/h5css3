@@ -402,11 +402,63 @@
 
 /*第六屏布局*/
 .bg06{
-    background: url(../images/06-bg.png) no-repeat left bottom
+    background: url(../images/06-bg.png) no-repeat 25% bottom;
+}
+.bg06 .clouds{
+    position: absolute;
+    top: -50px;
+    left: 0;
 }
 .bg06 .text06-01{
     position: absolute;
 }
 .bg06 .text06-02{
     opacity: 0;
+}
+.bg06 .text06{
+    position: absolute;
+    top: 80px;
+    left: 140px;
+}
+.bg06 .box{
+    position: absolute;
+    top: 150px;
+    left: 140px;
+}
+.bg06 .addressInfo{
+    position: absolute;
+    top: -45px;
+    right: -30px;
+}
+.bg06 .addressInfo img:first-child{
+    opacity: 0;
+    position: absolute;
+}
+.bg06 .addressInfo img:last-child{
+    opacity: 0;
+}
+.bg06 .car{
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+}
+
+/* 第六屏动画 */
+.bg06.now{
+    background: url(../images/06-bg.png) no-repeat 100% bottom;
+    transition: all 1s linear 1s;
+}
+.bg06.now .clouds img:first-child{
+    animation: flow06 20s linear infinite alternate;
+}
+.bg06.now .clouds img:last-child{
+    animation: flow06 30s linear infinite alternate;
+}
+@keyframes flow06{
+    from{
+        transform: translateX(-500px);
+    }
+    to{
+        transform: translateX(500px);
+    }
 }

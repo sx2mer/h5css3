@@ -38,6 +38,7 @@ $(function () {
         // console.log("动画结束");
         $('.bg05').addClass('orderReady');
     });
+    
     /**
      * 判断各浏览器transitionend事件名称
     */
