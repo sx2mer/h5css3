@@ -23,6 +23,8 @@ $(function () {
                 $('.bg02').addClass('leaved');
             } else if (index == 3 && nextIndex == 4) {
                 $('.bg03').addClass('leaved');
+            } else if (index == 5 && nextIndex == 6) {
+                $('.bg05').addClass('leaved');
             }
         },
     });

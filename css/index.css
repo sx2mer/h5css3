@@ -327,7 +327,7 @@
 /**第五屏*/
 .bg05{
     background: url(../images/05-bg.png) no-repeat center bottom;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .bg05 .items_wrapper{
     /* height: 100%; */
@@ -423,7 +423,7 @@
 .bg06 .box{
     position: absolute;
     top: 150px;
-    left: 140px;
+    left: -500px;
 }
 .bg06 .addressInfo{
     position: absolute;
@@ -442,7 +442,36 @@
     bottom: 0;
     left: 100px;
 }
+.bg06 .worker{
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+    transform-origin: bottom left;
+    opacity: 0;
+}
+.bg06 .worker img:last-child{
+    position: absolute;
+    top: -135px;
+    right: -60px;
+    opacity: 0;
+}
+.bg06 .buyer{
+    position: absolute;
+    right: 70px;
+    bottom: 116px;
 
+    opacity: 0;
+}
+.bg06 .buyer img:first-child{
+    position: absolute;
+    /* z-index: 1002; */
+    bottom: 0;
+}
+.bg06 .buyer img:last-child{
+    opacity: 0;
+    transform: scale(0.4);
+    transform-origin: right bottom;
+}
 /* 第六屏动画 */
 .bg06.now{
     background: url(../images/06-bg.png) no-repeat 100% bottom;
@@ -461,6 +490,14 @@
     to{
         transform: translateX(500px);
     }
+}
+.bg06.now .text06-01{
+    opacity: 0;
+    transition: opacity 1s linear 5.5s;
+}
+.bg06.now .text06-02{
+    opacity: 1;
+    transition: opacity 1s linear 5.5s;
 }
 .bg06.now .addressInfo img:first-child{
     animation: addressShow-Fade 1s linear 1s; 
@@ -481,21 +518,13 @@
         opacity: 0;
     }
 }
-.bg06 .worker{
-    position: absolute;
-    bottom: 0;
-    left: 100px;
-    transform-origin: bottom left;
-    opacity: 0;
-}
-.bg06 .worker img:last-child{
-    position: absolute;
-    top: -135px;
-    right: -60px;
-    opacity: 0;
-}
+
 .bg06.now .worker{
-    animation: workerShow 3s linear 2s forwards;
+    animation: workerShow 2.5s linear 2s forwards;
+}
+.bg06.now .worker img:last-child{
+    opacity: 1;
+    transition: opacity 1s linear 4.5s;
 }
 @keyframes workerShow{
     0%{
@@ -522,6 +551,49 @@
         left: 300px;
     }
 }
-.bg06 .buyer{
-    opacity: 0;
+
+.bg06.now .buyer{
+    opacity: 1;
+    transition: opacity 1s linear 5.5s;
+}
+.bg06.now .buyer img:last-child{
+    opacity: 1;
+    transform: scale(1);
+    transform-origin: bottom right;
+    transform: translateX(-140px);
+    transition: all 1s linear 6.5s;
+}
+
+.bg05.leaved .sofa{
+    /* z-index: 1010;
+    opacity: 1; */
+    animation: sofa05-06 1s linear;
+}
+@keyframes sofa05-06{
+    from{
+
+    }
+    to{
+        display: block;
+        z-index: 1001;
+        transform: translateY(1500px) scale(0.2) rotate(30deg);
+        /* transition: all 1s linear forwards;   */
+    }
+}
+.bg06.now .box{
+    animation: boxAnim 2s linear;
+}
+@keyframes boxAnim{
+    0%{
+        left: 150px;
+    }
+    50%{
+        left: 150px;
+        top: 500px;
+    }
+    100%{
+        left: 150px;
+        top: 500px;
+        opacity: 0;
+    }
 }
