@@ -462,3 +462,66 @@
         transform: translateX(500px);
     }
 }
+.bg06.now .addressInfo img:first-child{
+    animation: addressShow-Fade 1s linear 1s; 
+}
+.bg06.now .addressInfo img:last-child{
+    /* position: absolute; */
+    transition: all 0.5s linear 1.5s;
+    opacity: 1;
+}
+@keyframes addressShow-Fade{
+    0%{
+
+    }
+    50%{
+        opacity: 1; 
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.bg06 .worker{
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+    transform-origin: bottom left;
+    opacity: 0;
+}
+.bg06 .worker img:last-child{
+    position: absolute;
+    top: -135px;
+    right: -60px;
+    opacity: 0;
+}
+.bg06.now .worker{
+    animation: workerShow 3s linear 2s forwards;
+}
+@keyframes workerShow{
+    0%{
+        transform: scale(0.3);
+        opacity: 1;
+    }
+    33%{
+        opacity: 1;
+        transform: scale(1);
+        /* transform-origin: bottom left;        */
+    }
+    66%{
+        opacity: 1;
+        left: 100px;
+        /* transform: scale(1); */
+        /* transform-origin: bottom left;  */
+        bottom: 90px;
+    }
+    100%{
+        opacity: 1;
+        /* transform: scale(1); */
+        /* transform-origin: bottom left;  */
+        bottom: 90px;
+        left: 300px;
+    }
+}
+.bg06 .buyer{
+    opacity: 0;
+}
