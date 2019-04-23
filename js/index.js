@@ -40,7 +40,10 @@ $(function () {
         // console.log("动画结束");
         $('.bg05').addClass('orderReady');
     });
-    
+    $('.bg05 .sofa').on('animationstart',function(){
+        console.log("动画结束");
+        $('.bg06').addClass('sofaReady');
+    });
     /**
      * 判断各浏览器transitionend事件名称
     */

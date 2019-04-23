@@ -422,8 +422,8 @@
 }
 .bg06 .box{
     position: absolute;
-    top: 150px;
-    left: -500px;
+    top: -50px;
+    left: -1500px;
 }
 .bg06 .addressInfo{
     position: absolute;
@@ -576,18 +576,21 @@
     to{
         display: block;
         z-index: 1001;
-        transform: translateY(1500px) scale(0.2) rotate(30deg);
+        transform: translateY(1600px) scale(0.2) rotate(30deg);
         /* transition: all 1s linear forwards;   */
     }
 }
-.bg06.now .box{
-    animation: boxAnim 2s linear;
+.bg06.sofaReady .box{
+    animation: boxAnim 2s linear forwards;
 }
 @keyframes boxAnim{
     0%{
-        left: 150px;
     }
-    50%{
+    33%{
+        left: 150px;
+        top: -50px;
+    }
+    66%{
         left: 150px;
         top: 500px;
     }
