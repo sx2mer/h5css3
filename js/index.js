@@ -25,6 +25,7 @@ $(function () {
                 $('.bg03').addClass('leaved');
             } else if (index == 5 && nextIndex == 6) {
                 $('.bg05').addClass('leaved');
+                $('.bg06 .box').addClass('boxReady');
             }
         },
     });
