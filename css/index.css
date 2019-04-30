@@ -600,3 +600,59 @@
 .bg07 {
     background: url(../images/07-bg.png) no-repeat center bottom;
 }
+.bg07 .text07{
+    position: absolute;
+    left: 157px;
+    top: 180px;
+    /* opacity: 0; */
+    transform: scale(0);
+    transform-origin: left bottom;
+}
+.bg07.now .text07{
+    animation: text07show 1.5s linear forwards;
+}
+@keyframes text07show{
+    0%{
+    }
+    70%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.bg07 .stars{
+    position: absolute;
+    left: 158px;
+    top: 139px;
+}
+
+.bg07 .stars img{
+    float: left;
+    margin-right: 6px;
+    opacity: 0;
+}
+.bg07.now .stars img{
+    opacity: 1;
+    transition: opacity 1s linear;   
+}
+
+
+/* 第八屏 */
+.bg08{
+    background: url(../images/08-bg.png);
+}
+.bg08 .button08{
+    text-align: center;
+}
+.bg08 .button08 img:first-child{
+    position: absolute;
+}
+.bg08 .button08 img:first-child:hover{
+    opacity: 0;
+}
+.bg08 .again{
+    position: absolute;
+    right: 0;
+    top: 80px;
+}
